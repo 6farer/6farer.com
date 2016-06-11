@@ -1,9 +1,11 @@
 var trackUrl = 'https://soundcloud.com/skeebsullivan/realm';
 
 var Visualizer = function() {
+    var city;
     var sixSize;
     var audioSource;
     var containerId = 'wavy';
+    var cityId = 'city';
     var fgCanvas;
     var fgCtx;
     var bgCanvas;
@@ -28,6 +30,11 @@ var Visualizer = function() {
             this.high -= this.decay;
             val = this.high;
         }
+
+        // if (this.index == Math.round(sixes.length * (7 / 10))) {
+        //     city.style.opacity = 0.02 + (0.8 * (val / 255));
+        //     console.log(val);
+        // }
 
         // figure out what colour to fill it and then draw the six
         var r, g, b, a;
@@ -74,25 +81,29 @@ var Visualizer = function() {
     };
 
     var drawBg = function() {
-        bgCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
-        var r, g, b, a;
-        var val = audioSource.volume/1000;
-        r = 200 + (Math.sin(val) + 1) * 28;
-        g = val * 2;
-        b = val * 8;
-        a = Math.sin(val+3*Math.PI/2) + 1;
-        bgCtx.beginPath();
-        bgCtx.rect(0, 0, bgCanvas.width, bgCanvas.height);
-        // create radial gradient
-        var grd = bgCtx.createRadialGradient(bgCanvas.width/2, bgCanvas.height/2, val, bgCanvas.width/2, bgCanvas.height/2, bgCanvas.width-Math.min(Math.pow(val, 2.7), bgCanvas.width - 20));
-        grd.addColorStop(0, 'rgba(0,0,0,0)');// centre is transparent black
-        grd.addColorStop(0.8, "rgba(" +
-            Math.round(r) + ", " +
-            Math.round(g) + ", " +
-            Math.round(b) + ", 0.4)"); // edges are reddish
+        var val = audioSource.volume / 100;
+        // The below shit needs to be exponential. Linear contrast looks bad. Random values
+        city.style.opacity = 0.02 + (0.9 * (val * val / 20000));
+        console.log(val);
+        // bgCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+        // var r, g, b, a;
+        // var val = audioSource.volume/1000;
+        // r = 200 + (Math.sin(val) + 1) * 28;
+        // g = val * 2;
+        // b = val * 8;
+        // a = Math.sin(val+3*Math.PI/2) + 1;
+        // bgCtx.beginPath();
+        // bgCtx.rect(0, 0, bgCanvas.width, bgCanvas.height);
+        // // create radial gradient
+        // var grd = bgCtx.createRadialGradient(bgCanvas.width/2, bgCanvas.height/2, val, bgCanvas.width/2, bgCanvas.height/2, bgCanvas.width-Math.min(Math.pow(val, 2.7), bgCanvas.width - 20));
+        // grd.addColorStop(0, 'rgba(0,0,0,0)');// centre is transparent black
+        // grd.addColorStop(0.8, "rgba(" +
+        //     Math.round(r) + ", " +
+        //     Math.round(g) + ", " +
+        //     Math.round(b) + ", 0.4)"); // edges are reddish
 
-        bgCtx.fillStyle = grd;
-        bgCtx.fill();
+        // bgCtx.fillStyle = grd;
+        // bgCtx.fill();
         /*
          // debug data
          bgCtx.font = "bold 30px sans-serif";
@@ -128,6 +139,7 @@ var Visualizer = function() {
         sixes.forEach(function(six) {
             six.draw();
         });
+        drawBg();
         // sixes.forEach(function(six) {
         //     if (six.highlight > 0) {
         //         six.drawHighlight();
@@ -141,12 +153,12 @@ var Visualizer = function() {
         for (var index = 0; index < 50; index++) {
             sixes.push(new Six(sixSize, fgCtx, index));;
         }
-        console.log(sixes.length)
     }
 
     this.init = function(options) {
         audioSource = options.audioSource;
         var container = document.getElementById(containerId);
+        city = document.getElementById(cityId);
 
         // foreground
         fgCanvas = document.createElement('canvas');
