@@ -10,13 +10,11 @@ var Visualizer = function() {
     var bgCtx;
     var sixes = [];
 
-    function Six(x, y, sixSize, ctx, index) {
-        this.x = x;
-        this.y = y;
+    function Six(sixSize, ctx, index) {
         this.sixSize = sixSize;
         this.high = 0; // the highest colour value, which then fades out
         this.index = index;
-        this.decay = this.index > 42 ? 1.5 : 2;
+        this.decay = this.index > 20 ? 1.5 : 4;
         this.ctx = ctx;
     }
     Six.prototype.draw = function() {
@@ -29,10 +27,6 @@ var Visualizer = function() {
         } else {
             this.high -= this.decay;
             val = this.high;
-        }
-
-        if (this.index == 1) {
-            console.log(this.index + "->" + val);
         }
 
         // figure out what colour to fill it and then draw the six
@@ -64,22 +58,19 @@ var Visualizer = function() {
             var e = 2.7182;
             a = (0.5/(1 + 40 * Math.pow(e, -val/8))) + (0.5/(1 + 40 * Math.pow(e, -val/20)));
 
-            var minSize = 100;
-            var increment = 20;
+            var minSize = 6;
+            var increment = 15;
             var size = minSize+ (increment * val / 255);
-            this.ctx.font = size + "px Arial";
+            this.ctx.font = size + "em Courier New";
             this.ctx.textAlign = "center";
-            this.ctx.fillStyle = "rgba(" +
+            this.ctx.textBaseline = 'middle';
+            this.ctx.strokeStyle = "rgba(" +
                 Math.round(r) + ", " +
                 Math.round(g) + ", " +
                 Math.round(b) + ", " +
                 a + ")";
-            this.ctx.fillText("6 f a r e r", 0, 0);
+            this.ctx.strokeText("6farer", 0, 0);
         }
-        // display the tile number for debug purposes
-        /*this.ctx.font = "bold 12px sans-serif";
-         this.ctx.fillStyle = 'grey';
-         this.ctx.fillText(this.num, this.vertices[0][0], this.vertices[0][1]);*/
     };
 
     var drawBg = function() {
@@ -126,7 +117,7 @@ var Visualizer = function() {
 
             sixSize = fgCanvas.width > fgCanvas.height ? fgCanvas.width / 25 : fgCanvas.height / 25;
 
-            drawBg();
+            // drawBg();
             makeSixes();
         }
     };
@@ -142,34 +133,15 @@ var Visualizer = function() {
         //         six.drawHighlight();
         //     }
         // });
-
-        // debug
-         // fgCtx.font = "bold 24px sans-serif";
-         // fgCtx.fillStyle = 'grey';
-         // fgCtx.fillText("minMental:" + 0, 10, 10);
-         // fgCtx.fillText("maxMental:" + 0, 10, 40);
         requestAnimationFrame(draw);
     };
 
     var makeSixes = function() {
         sixes = [];
-        var i = 0; // unique number for each tile
-        sixes.push(new Six(0, 0, sixSize, fgCtx, i)); // the centre tile
-        i++;
-        for (var layer = 1; layer < 7; layer++) {
-            sixes.push(new Six(0, layer, sixSize, fgCtx, i)); i++;
-            sixes.push(new Six(0, -layer, sixSize, fgCtx, i)); i++;
-            for(var x = 1; x < layer; x++) {
-                sixes.push(new Six(x, -layer, sixSize, fgCtx, i)); i++;
-                sixes.push(new Six(-x, layer, sixSize, fgCtx, i)); i++;
-                sixes.push(new Six(x, layer-x, sixSize, fgCtx, i)); i++;
-                sixes.push(new Six(-x, -layer+x, sixSize, fgCtx, i)); i++;
-            }
-            for(var y = -layer; y <= 0; y++) {
-                sixes.push(new Six(layer, y, sixSize, fgCtx, i)); i++;
-                sixes.push(new Six(-layer, -y, sixSize, fgCtx, i)); i++;
-            }
+        for (var index = 0; index < 50; index++) {
+            sixes.push(new Six(sixSize, fgCtx, index));;
         }
+        console.log(sixes.length)
     }
 
     this.init = function(options) {
@@ -190,7 +162,7 @@ var Visualizer = function() {
         this.resizeCanvas();
         draw();
 
-        setInterval(drawBg, 100);
+        // setInterval(drawBg, 100);
         // resize the canvas to fill browser window dynamically
         window.addEventListener('resize', this.resizeCanvas, false);
     }
