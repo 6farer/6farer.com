@@ -1,0 +1,8 @@
+body {
+  overflow: hidden;
+  background-color: #111;
+}
+
+#player {
+  display: none;
+}
