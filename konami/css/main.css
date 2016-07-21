@@ -1,0 +1,20 @@
+body {
+  overflow: hidden;
+  background-color: #111;
+}
+
+#city {
+  background: url('../img/tdot.jpg') no-repeat center center fixed;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 0.02;
+}
+
+#player {
+  display: none;
+}
