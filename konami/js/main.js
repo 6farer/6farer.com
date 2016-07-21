@@ -1,4 +1,4 @@
-var trackUrl = 'https://soundcloud.com/skeebsullivan/realm';
+var trackUrl = 'https://soundcloud.com/dreamperfectregime/eung-freestyle-live-sik-k-punchnello-owen-ovadoz-flowsik';
 
 var Visualizer = function() {
     var city;
@@ -83,36 +83,8 @@ var Visualizer = function() {
     var drawBg = function() {
         var val = audioSource.volume / 100;
         // The below shit needs to be exponential. Linear contrast looks bad. Random values
-        city.style.opacity = 0.02 + (0.9 * (val * val / 20000));
+        city.style.opacity = 0.02 + (0.9 * (val * val / 24000));
         console.log(val);
-        // bgCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
-        // var r, g, b, a;
-        // var val = audioSource.volume/1000;
-        // r = 200 + (Math.sin(val) + 1) * 28;
-        // g = val * 2;
-        // b = val * 8;
-        // a = Math.sin(val+3*Math.PI/2) + 1;
-        // bgCtx.beginPath();
-        // bgCtx.rect(0, 0, bgCanvas.width, bgCanvas.height);
-        // // create radial gradient
-        // var grd = bgCtx.createRadialGradient(bgCanvas.width/2, bgCanvas.height/2, val, bgCanvas.width/2, bgCanvas.height/2, bgCanvas.width-Math.min(Math.pow(val, 2.7), bgCanvas.width - 20));
-        // grd.addColorStop(0, 'rgba(0,0,0,0)');// centre is transparent black
-        // grd.addColorStop(0.8, "rgba(" +
-        //     Math.round(r) + ", " +
-        //     Math.round(g) + ", " +
-        //     Math.round(b) + ", 0.4)"); // edges are reddish
-
-        // bgCtx.fillStyle = grd;
-        // bgCtx.fill();
-        /*
-         // debug data
-         bgCtx.font = "bold 30px sans-serif";
-         bgCtx.fillStyle = 'grey';
-         bgCtx.fillText("val: " + val, 30, 30);
-         bgCtx.fillText("r: " + r , 30, 60);
-         bgCtx.fillText("g: " + g , 30, 90);
-         bgCtx.fillText("b: " + b , 30, 120);
-         bgCtx.fillText("a: " + a , 30, 150);*/
     };
 
     this.resizeCanvas = function() {
@@ -128,7 +100,6 @@ var Visualizer = function() {
 
             sixSize = fgCanvas.width > fgCanvas.height ? fgCanvas.width / 25 : fgCanvas.height / 25;
 
-            // drawBg();
             makeSixes();
         }
     };
@@ -140,11 +111,6 @@ var Visualizer = function() {
             six.draw();
         });
         drawBg();
-        // sixes.forEach(function(six) {
-        //     if (six.highlight > 0) {
-        //         six.drawHighlight();
-        //     }
-        // });
         requestAnimationFrame(draw);
     };
 
@@ -174,7 +140,6 @@ var Visualizer = function() {
         this.resizeCanvas();
         draw();
 
-        // setInterval(drawBg, 100);
         // resize the canvas to fill browser window dynamically
         window.addEventListener('resize', this.resizeCanvas, false);
     }

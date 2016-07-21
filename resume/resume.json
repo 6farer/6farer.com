@@ -1,0 +1,229 @@
+{
+  "basics": {
+    "name": "Eric Kim",
+    "label": "Full-stack Developer / Consultant",
+    "picture": "",
+    "email": "eric@6farer.com",
+    "phone": "(416) 587-4506",
+    "website": "http://6farer.com",
+    "summary": "Strongly focused in web technologies and third-party API integrations. Interested in UI design and DevOps automation. Coding since 2004. Professionally since 2010.",
+    "location": {
+      "address": "32 Lincoln Green Dr.",
+      "postalCode": "L3P1R5",
+      "city": "Markham",
+      "countryCode": "CA",
+      "region": "Ontario"
+    },
+    "profiles": [{
+      "network": "Twitter",
+      "username": "6farer",
+      "url": "http://twitter.com/6farer"
+    },{
+      "network": "LinkedIn",
+      "username": "-eric-kim-",
+      "url": "https://www.linkedin.com/in/-eric-kim-"
+    },{
+      "network": "SoundCloud",
+      "username": "6farer",
+      "url": "https://soundcloud.com/6farer"
+    }]
+  },
+  "skills": [{
+    "name": "Back-end",
+    "level": "",
+    "keywords": [
+      "Java [Spring, Maven, Hibernate, JPA]",
+      "NodeJS",
+      "PHP",
+      "Ruby"
+    ]
+  },{
+    "name": "Front-end",
+    "level": "",
+    "keywords": [
+      "AngularJS",
+      "React",
+      "Bootstrap",
+      "Foundation",
+      "SASS",
+      "LESS",
+      "JavaScript",
+      "jQuery"
+    ]
+  },{
+    "name": "Web Tooling",
+    "level": "",
+    "keywords": [
+      "Grunt",
+      "Gulp",
+      "Webpack",
+      "Bower"
+    ]
+  },{
+    "name": "Servers",
+    "level": "",
+    "keywords": [
+      "AWS [EC2, S3, RDS, DynamoDB, SQS]",
+      "Apache HTTP",
+      "Tomcat",
+      "NGINX",
+      "Express",
+      "Heroku"
+    ]
+  },{
+    "name": "Databases/Stores",
+    "level": "",
+    "keywords": [
+      "MySQL",
+      "MSSQL",
+      "MongoDB",
+      "Elasticsearch",
+      "Solr",
+      "Redis"
+    ]
+  },{
+    "name": "Messaging",
+    "level": "",
+    "keywords": [
+      "JSON",
+      "REST",
+      "SOAP",
+      "Apache Thrift",
+      "Websockets",
+      "JMS"
+    ]
+  },{
+    "name": "DevOps",
+    "level": "",
+    "keywords": [
+      "Jenkins",
+      "Docker",
+      "Maestro",
+      "Bash scripting",
+      "Python scripting"
+    ]
+  },{
+    "name": "Other",
+    "level": "",
+    "keywords": [
+      "Salesforce APEX",
+      "VisualForce"
+    ]
+  }],
+  "work": [{
+    "company": "Quantum Mob Inc.",
+    "position": "Co-Founder",
+    "website": "http://www.quantummob.com",
+    "startDate": "2016-04",
+    "endDate": "",
+    "summary": "Technologies: Java (Spring), React, AngularJS, Docker, AWS",
+    "highlights": [
+      "Co-founded a consulting firm - event-driven microservices and continuous delivery",
+      "Developing tool to assist in creation of event-driven tasks. Uses user-friendly third-party API integration and data manipulation to simplify the creation of microservices"
+    ]
+  },{
+    "company": "Eyereturn Marketing",
+    "position": "Full-stack Developer",
+    "website": "http://eyereturnmarketing.com",
+    "startDate": "2015-09",
+    "endDate": "2016-03",
+    "summary": "Technologies: Java (Spring), AngularJS, Docker, Maestro, ELK",
+    "highlights": [
+      "Assigned to work in self-managed team - tasked with creating a product to unify new and legacy services, refactoring + merging MySQL and legacy MSSQL schemas, and creating a secure REST API for public usage",
+      "Designed and developed AngularJS-based ad-management solution - reduced page load speeds by 10x, decoupled Java API, analyzed and simplified workflow",
+      "Identified need for standalone authentication service - implemented with OAuth 2.0 support",
+      "Developed secure REST API integrated with new authentication service",
+      "Advocated and initiated company-wide Slack adoption in an effort to reduce email clutter - integrated Jenkins, Atlassian products, and logging to assist self-management for all teams"
+    ]
+  },{
+    "company": "Eyereturn Marketing",
+    "position": "Application Developer / Lead",
+    "website": "http://eyereturnmarketing.com",
+    "startDate": "2014-09",
+    "endDate": "2015-08",
+    "summary": "Technologies: Java (Spring, Hibernate, Maven, JUnit), Force.com (APEX, VisualForce), JMS, Jenkins, MariaDB, Docker",
+    "highlights": [
+      "Appointed lead developer for Salesforce integration project - architected secure, fail-safe integration with Salesforce and internal Java-based API to automate sales process and ad campaign creation",
+      "Completely rebuilt Force.com platform to allow highly customized views and logic",
+      "Worked on team responsible for creating Eyereturn's first client facing ad-management solution",
+      "Refactored monolith into microservices running on docker containers, reducing potential impact and involvement of various teams for releases",
+      "Integrated third-party API's for cross-platform consumption"
+    ]
+  },{
+    "company": "Eyereturn Marketing",
+    "position": "Application Developer",
+    "website": "http://eyereturnmarketing.com",
+    "startDate": "2013-09",
+    "endDate": "2014-08",
+    "summary": "Technologies: Java (Spring), NodeJS, JavaScript, AngularJS, Thrift, AWS",
+    "highlights": [
+      "Created specifications + documentation and managed initial phase for Salesforce integration project",
+      "Implemented Apache Thrift into existing tightly-coupled monolith application to support cross-language communication. Developed integration with legacy ad-trafficking and accounting software. Implementation was also used for tracking and reporting",
+      "Developed email system using NodeJS, Express, and AngularJS to automate user interaction",
+      "Initiated and developed re-usable geo-targeting support for ads",
+      "Integrated client website analytics for ad-retargeting and conversion reporting",
+      "Developed multiple HTML5/JavaScript advertisements"
+    ]
+  },{
+    "company": "Osgoode Hall Law School (York University)",
+    "position": "Web Developer",
+    "website": "http://www.osgoode.yorku.ca",
+    "startDate": "2012-09",
+    "endDate": "2013-08",
+    "summary": "Technologies: PHP, Ruby, AngularJS, jQuery, MongoDB, Redis",
+    "highlights": [
+      "Existing vendor solutions for digital signage had 50% uptime. Initiated, designed, and developed web-based digital signage. Result: 99% uptime, no more blackbox (extendable), no recurring vendor cost",
+      "Designed and developed web application to manage, transform, and merge multiple RSS & Twitter feed sources",
+      "Created REST API for aggregated feeds - to be consumed by signage, dashboards, and OHLS website",
+      "Developed application to consume feeds and post to WordPress blog",
+      "Worked with SysAdmins to develop dashboards for server monitoring",
+      "Optimized employee productivity by developing chrome extension to assist employees in performing tasks on York Central IT legacy websites"
+    ]
+  },{
+    "company": "Lifestyle Ninety",
+    "position": "Founder & Consultant",
+    "website": "",
+    "startDate": "2010-10",
+    "endDate": "2013-11",
+    "summary": "Technologies: PHP, Ruby, jQuery, HTML5, CSS3 & LESS, MySQL, WordPress, AWS",
+    "highlights": [
+      "Founded digital agency while in university. Employed fellow students, creating opportunities for student jobs and practical experience",
+      "Created web application to assist in student enrolment, hosted on EC2 and RDS",
+      "Formed partnership with Blipp Global to develop client websites",
+      "Designed, developed, and maintained multiple WordPress websites and plugins with custom theming"
+    ]
+  }],
+  "education": [{
+    "institution": "Lassonde School of Engineering (York University)",
+    "area": "Computer Science",
+    "studyType": "BSc",
+    "startDate": "2010",
+    "endDate": "2013",
+    "gpa": "",
+    "courses": []
+  },{
+    "institution": "University of Toronto",
+    "area": "Electrical Engineering",
+    "studyType": "BSc",
+    "startDate": "2007",
+    "endDate": "2010",
+    "gpa": "",
+    "courses": []
+  }],
+  "interests": [{
+    "name": "Qualitative",
+    "keywords": [
+      "UI Design",
+      "Music Production & Software Synths",
+      "Startups"
+    ]
+  },{
+    "name": "Quantitative",
+    "keywords": [
+      "Quantum Mechanics & Relativity",
+      "Quantum Computing",
+      "Data Compression"
+    ]
+  }],
+  "references": []
+}

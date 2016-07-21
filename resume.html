@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+  <title>Eric Kim - Resume</title>
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/resume.css">
+
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="js/jquery-autobars.js" type="text/javascript"></script>
+  <script src="resume/short.hbs" type="text/x-handlebars-template"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(document).autoBars(function() {
+        $.getJSON("resume/resume.json", function(json) {
+          var data = {"resume" : json};
+          var $html = $.handlebarTemplates['short'](data);
+          $('body').append($html);
+        })
+        .fail(function(jqxhr, textStatus, error) {
+           var err = textStatus + ", " + error;
+           console.log("Request Failed: " + err);
+         });
+      });
+    })
+  </script>
+</head>
+<body>
+</body>

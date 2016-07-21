@@ -1,0 +1,21 @@
+.fade-in {
+    @include fadeInUp();
+}
+
+.fade-in-100 {
+    @include fadeInUp(
+        $delay: .1s
+    );
+}
+
+.fade-in-300 {
+    @include fadeInUp(
+        $delay: .3s
+    );
+}
+
+.flash-1000 {
+    @include flash(
+        $delay: 1s
+    )
+}
