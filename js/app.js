@@ -31,6 +31,7 @@ var imgLoaded = function() {
 function init() {
     loadLogo();
     loadOverlays();
+    setXPYears();
 }
 
 function loadLogo() {
@@ -92,5 +93,12 @@ function findDimensions(img) {
     }
     return dims;
 }
+
+function setXPYears() {
+    var elem = document.getElementById('xp-years');
+    var years = new Date().getFullYear() - 2004;
+    elem.innerText = years;
+}
+
 
 init();
