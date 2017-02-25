@@ -1,16 +1,14 @@
 {
   "basics": {
     "name": "Eric Kim",
-    "label": "Full-stack Developer / Consultant",
+    "label": "Fullstack Software Engineer / Consultant",
     "picture": "",
     "email": "eric@6farer.com",
     "phone": "(416) 587-4506",
     "website": "http://6farer.com",
     "summary": "Strongly focused in web technologies and third-party API integrations. Interested in UI design and DevOps automation. Coding since 2004. Professionally since 2010.",
     "location": {
-      "address": "32 Lincoln Green Dr.",
-      "postalCode": "L3P1R5",
-      "city": "Markham",
+      "city": "Toronto",
       "countryCode": "CA",
       "region": "Ontario"
     },
@@ -74,7 +72,7 @@
     "name": "Databases/Stores",
     "level": "",
     "keywords": [
-      "MySQL",
+      "MySQL/MariaDB",
       "MSSQL",
       "MongoDB",
       "Elasticsearch",
@@ -113,17 +111,22 @@
   "work": [{
     "company": "Quantum Mob Inc.",
     "position": "Co-Founder",
-    "website": "http://www.quantummob.com",
+    "website": "http://www.qmo.io",
     "startDate": "2016-04",
     "endDate": "",
-    "summary": "Technologies: Java (Spring), React, AngularJS, Docker, AWS",
+    "summary": "Technologies: Java (Spring), React, AngularJS, Docker, Jenkins, AWS, Heroku",
     "highlights": [
-      "Co-founded a consulting firm - event-driven microservices and continuous delivery",
-      "Developing tool to assist in creation of event-driven tasks. Uses user-friendly third-party API integration and data manipulation to simplify the creation of microservices"
+      "Co-Founded a software consulting firm - focussing on building UX-first web applications",
+      "Developing tool to assist in creation of event-driven tasks. Uses user-friendly third-party API integration and data manipulation to simplify the creation of microservices",
+      "Work with businesses to identify business needs - propose and develop technical solutions",
+      "Client: UDIO - Managed front-end team to revamp broken AngularJS web application with security, build processes, and developer workflow",
+      "Client: UDIO - Identified source of performance issues and advised on alternate technology stack to support growing user-base",
+      "Client: UDIO - Optimized Node.js back-end and MongoDB calls to reduce latency",
+      "Client: UDIO - Laid groundwork to ease transition to new technology stack"
     ]
   },{
     "company": "Eyereturn Marketing",
-    "position": "Full-stack Developer",
+    "position": "Fullstack Java Developer",
     "website": "http://eyereturnmarketing.com",
     "startDate": "2015-09",
     "endDate": "2016-03",
@@ -196,19 +199,11 @@
   "education": [{
     "institution": "Lassonde School of Engineering (York University)",
     "area": "Computer Science",
-    "studyType": "BSc",
-    "startDate": "2010",
-    "endDate": "2013",
-    "gpa": "",
-    "courses": []
+    "studyType": "BSc"
   },{
     "institution": "University of Toronto",
     "area": "Electrical Engineering",
-    "studyType": "BSc",
-    "startDate": "2007",
-    "endDate": "2010",
-    "gpa": "",
-    "courses": []
+    "studyType": "BSc"
   }],
   "interests": [{
     "name": "Qualitative",
@@ -222,7 +217,8 @@
     "keywords": [
       "Quantum Mechanics & Relativity",
       "Quantum Computing",
-      "Data Compression"
+      "Data Compression",
+      "Artificial Intelligence"
     ]
   }],
   "references": []
