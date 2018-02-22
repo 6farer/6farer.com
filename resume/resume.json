@@ -1,16 +1,16 @@
 {
   "basics": {
     "name": "Eric Kim",
-    "label": "Full-stack Developer / Consultant",
+    "label": "Software Consultant",
     "picture": "",
     "email": "eric@6farer.com",
     "phone": "(416) 587-4506",
     "website": "http://6farer.com",
     "summary": "Strongly focused in web technologies and third-party API integrations. Interested in UI design and DevOps automation. Coding since 2004. Professionally since 2010.",
     "location": {
-      "address": "32 Lincoln Green Dr.",
-      "postalCode": "L3P1R5",
-      "city": "Markham",
+      "address": "10 Capreol Court",
+      "postalCode": "M5V4B3",
+      "city": "Toronto",
       "countryCode": "CA",
       "region": "Ontario"
     },
@@ -33,7 +33,7 @@
     "level": "",
     "keywords": [
       "Java [Spring, Maven, Hibernate, JPA]",
-      "NodeJS",
+      "Node.js",
       "PHP",
       "Ruby"
     ]
@@ -41,8 +41,10 @@
     "name": "Front-end",
     "level": "",
     "keywords": [
-      "AngularJS",
       "React",
+      "React Native",
+      "Angular",
+      "Vue",
       "Bootstrap",
       "Foundation",
       "SASS",
@@ -54,9 +56,10 @@
     "name": "Web Tooling",
     "level": "",
     "keywords": [
+      "Webpack",
+      "npm scripts",
       "Grunt",
       "Gulp",
-      "Webpack",
       "Bower"
     ]
   },{
@@ -112,8 +115,8 @@
   }],
   "work": [{
     "company": "Quantum Mob Inc.",
-    "position": "Co-Founder",
-    "website": "http://www.quantummob.com",
+    "position": "Co-Founder & Director of Operations",
+    "website": "http://qmo.io",
     "startDate": "2016-04",
     "endDate": "",
     "summary": "Technologies: Java (Spring), React, AngularJS, Docker, AWS",
