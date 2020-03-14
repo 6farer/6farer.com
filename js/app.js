@@ -1,7 +1,7 @@
 $(document).foundation();
 
 var delay = 300;
-var logoSrc = 'http://www.quantummob.com/wp-content/uploads/2016/03/cropped-qm-logo-white-512px.png';
+var logoSrc = 'img/qm_logo.png';
 var overlaySrcs = [
     'img/camping.jpg',
     'img/hiking.jpg',
@@ -49,7 +49,7 @@ function loadOverlays() {
 }
 
 var $canvas = $('.cover-logo');
-$canvas.click(function() {open('http://www.quantummob.com')});
+$canvas.click(function() {open('https://qmo.io')});
 var canvas = $canvas[0];
 var ctx = canvas.getContext('2d');
 
