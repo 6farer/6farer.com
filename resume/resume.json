@@ -66,12 +66,13 @@
     "name": "Servers",
     "level": "",
     "keywords": [
-      "AWS [EC2, S3, RDS, DynamoDB, SQS]",
-      "Apache HTTP",
+      "AWS [EC2, ECS, S3, RDS, DynamoDB, SQS]",
+      "Apache",
       "Tomcat",
       "NGINX",
       "Express",
-      "Heroku"
+      "Heroku",
+      "Netlify"
     ]
   },{
     "name": "Databases/Stores",
@@ -115,13 +116,17 @@
   }],
   "work": [{
     "company": "Quantum Mob Inc.",
-    "position": "Co-Founder",
+    "position": "Co-founder",
     "website": "http://qmo.io",
     "startDate": "2016-04",
     "endDate": "",
     "summary": "Technologies: Java (Spring), React, AngularJS, Docker, Jenkins, AWS, Heroku",
     "highlights": [
-      "Co-Founded a software consulting firm - focussing on building UX-first web applications",
+      "Sold millions of dollars in deal sizes",
+      "Scaled team from 2 to 40+",
+      "Created sales and marketing team",
+      "Developed fire company culture",
+      "Hire and get things done",
       "Developing tool to assist in creation of event-driven tasks. Uses user-friendly third-party API integration and data manipulation to simplify the creation of microservices",
       "Work with businesses to identify business needs - propose and develop technical solutions",
       "Client: UDIO - Managed front-end team to revamp broken AngularJS web application with security, build processes, and developer workflow",
